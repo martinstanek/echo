@@ -4,6 +4,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6076CA32-4BD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Echo.Host", "src\Echo.Host\Echo.Host.csproj", "{8EC6F71F-6955-40B7-A942-1619C10AC882}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "misc", "misc", "{7AD691DD-29D2-47AF-B16F-182AA5D3043D}"
+	ProjectSection(SolutionItems) = preProject
+		misc\Dockerfile = misc\Dockerfile
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
