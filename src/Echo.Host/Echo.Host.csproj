@@ -9,11 +9,5 @@
         <ServerGarbageCollection>true</ServerGarbageCollection>
         <PublishAot>true</PublishAot>
     </PropertyGroup>
-
-    <ItemGroup>
-        <Content Update="wwwroot\index.html">
-            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-        </Content>
-    </ItemGroup>
     
 </Project>
