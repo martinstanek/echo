@@ -28,7 +28,7 @@ services:
     container_name: echo
     image: "awitec/echo:latest-arm64"
     ports:
-      - "5027:5027"
+      - "80:80"
     environment:
       - ECHO_TITLE=My Server
       - ECHO_MESSAGE=The site is under the construction.
