@@ -10,6 +10,7 @@ builder.Services.AddHandlers();
 var app = builder.Build();
 
 app.UseCustomEndpoints();
+app.UseHttpsRedirect();
 app.UseCors(p => { p.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader(); });
 app.Run();
 
