@@ -1,23 +1,22 @@
 ## The Echo
 
-* ... a simple echo server, while home-labbing - sometimes can get handy, either for testing the setup or as a placeholder *
+*... a simple echo server. While home-labbing - sometimes this can get handy, either for testing of the setup or as a placeholder for the future website/service*
 
-[![Build status](https://awitec.visualstudio.com/Awitec/_apis/build/status/awitec.edgemq)](https://awitec.visualstudio.com/Awitec/_build/latest?definitionId=52)
-![Docker Image Version](https://img.shields.io/docker/v/awitec/edgemq)
+[![Build status](https://awitec.visualstudio.com/Awitec/_apis/build/status/awitec.echo)](https://awitec.visualstudio.com/Awitec/_build/latest?definitionId=55)
+![Docker Image Version](https://img.shields.io/docker/v/awitec/echo)
 
-![logo](https://github.com/martinstanek/edgemq/blob/main/misc/ui.png?raw=true)
-
+![logo](https://github.com/martinstanek/echo/blob/main/misc/page.png?raw=true)
 
 ### Server
 
 ```
-http://localhost:5027 -> returns page
-http://localhost:5027/echo -> returns server time
+http://localhost:5027 -> returns the page
+http://localhost:5027/echo -> returns the server time
 http://localhost:5027/echo/your-message -> returns "your-message"
 ```
 ### Docker
 
-Available Docker Tags: https://hub.docker.com/repository/docker/awitec/edgemq/tags
+Available Docker Tags: https://hub.docker.com/repository/docker/awitec/echo/tags
 
 ### Compose
 
