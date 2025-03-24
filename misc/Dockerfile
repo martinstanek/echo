@@ -1,0 +1,8 @@
+FROM ubuntu:22.04
+EXPOSE 5027
+ENV ASPNETCORE_URLS=http://*:5027
+
+WORKDIR /app
+COPY . .
+
+ENTRYPOINT ["./Echo.Host"]
