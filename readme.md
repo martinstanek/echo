@@ -10,9 +10,9 @@
 ### Server
 
 ```
-http://localhost:5027 -> returns the page
-http://localhost:5027/echo -> returns the server time
-http://localhost:5027/echo/your-message -> returns "your-message"
+http://localhost -> returns the page
+http://localhost/echo -> returns the server time
+http://localhost/echo/your-message -> returns "your-message"
 ```
 ### Docker
 
