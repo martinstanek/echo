@@ -17,16 +17,4 @@ internal static class WebApplicationExtensions
 
         return webApplication;
     }
-
-    public static WebApplication UseHttpsRedirect(this WebApplication webApplication)
-    {
-        var variable = Environment.GetEnvironmentVariable("ECHO_HTTPSREDIRECT");
-
-        if (bool.TryParse(variable, out var useRedirect) && useRedirect)
-        {
-            webApplication.UseHttpsRedirection();
-        }
-
-        return webApplication;
-    }
 }
