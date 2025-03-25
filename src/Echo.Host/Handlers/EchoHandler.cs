@@ -7,6 +7,7 @@ namespace Echo.Host.Handlers;
 internal sealed class EchoHandler
 {
     private readonly EchoConfiguration _configuration;
+    private string _index = string.Empty;
 
     public EchoHandler(EchoConfiguration configuration)
     {
@@ -15,6 +16,27 @@ internal sealed class EchoHandler
 
     public IResult GetIndex()
     {
+        var index = GetAdjustedIndex();
+
+        return Results.Content(index, "text/html");
+    }
+
+    public IResult GetEcho(string message)
+    {
+        var response = string.IsNullOrWhiteSpace(message)
+            ? DateTime.Now.ToString("s")
+            : message;
+
+        return Results.Text(response, "text/plain");
+    }
+
+    private string GetAdjustedIndex()
+    {
+        if (!string.IsNullOrWhiteSpace(_index))
+        {
+            return _index;
+        }
+
         var index = """
                     <!DOCTYPE html>
                     <html lang="en">
@@ -51,15 +73,8 @@ internal sealed class EchoHandler
             index = index.Replace("EchoMessage", _configuration.Message);
         }
 
-        return Results.Content(index, "text/html");
-    }
+        _index = index;
 
-    public IResult GetEcho(string message)
-    {
-        var response = string.IsNullOrWhiteSpace(message)
-            ? DateTime.Now.ToString("s")
-            : message;
-
-        return Results.Text(response, "text/plain");
+        return _index;
     }
 }
